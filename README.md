@@ -1,4 +1,5 @@
 # Grepy
+
 ![CodeQL](https://github.com/UltiRequiem/grepy/workflows/CodeQL/badge.svg)
 ![PyTest](https://github.com/UltiRequiem/grepy/workflows/PyTest/badge.svg)
 ![Pylint](https://github.com/UltiRequiem/grepy/workflows/Pylint/badge.svg)
