@@ -19,7 +19,7 @@ pytest = "^6.2.4"
 pylint = "^2.10.2"
 
 [tool.poetry.scripts]
-chuy = 'grepy:main'
+grepy = 'grepy:main'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
