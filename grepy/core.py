@@ -2,7 +2,20 @@
 Here is defined the core of grepy
 """
 
-from sys import argv
+import argparse
+
+
+def get_arguments():
+    """
+    Get Arguments
+    """
+    parser = argparse.ArgumentParser("Sech for a word in a file.")
+    parser.add_argument("file")
+    parser.add_argument("string")
+
+    args = parser.parse_args()
+
+    return args.file, args.string
 
 
 def grep(word, file):
@@ -18,9 +31,11 @@ def main():
     """
     Entry Point of The Program
     """
+    string, file = get_arguments()
+
     try:
-        with open(file=argv[2], mode="r", encoding="UTF-8") as file:
-            grep(argv[1], file)
+        with open(file=file, mode="r", encoding="UTF-8") as file:
+            grep(string, file)
     except FileNotFoundError:
         print("That's not a vaild file.")
     except IndexError:
