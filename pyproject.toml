@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "grepy"
-version = "0.1.2"
+version = "0.2.0"
 description = "A Grep clone"
 authors = ["Eliaz Bobadilla <eliaz.bobadilladev@gmail.com>"]
 license = "MIT"

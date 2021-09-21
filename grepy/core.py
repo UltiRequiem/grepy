@@ -9,7 +9,7 @@ def get_arguments():
     """
     Get Arguments
     """
-    parser = argparse.ArgumentParser("Sech for a word in a file.")
+    parser = argparse.ArgumentParser("Search for a word in a file.")
 
     parser.add_argument("file", help="The file where the string will be searched.")
 
