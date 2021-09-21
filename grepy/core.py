@@ -3,6 +3,7 @@ Here is defined the core of grepy
 """
 
 import argparse
+from pprint import pprint
 
 
 def get_arguments():
@@ -11,9 +12,11 @@ def get_arguments():
     """
     parser = argparse.ArgumentParser("Search for a word in a file.")
 
-    parser.add_argument("file", help="The file where the string will be searched.")
+    parser.add_argument(
+        "file", help="The file where the string will be searched.", type=str
+    )
 
-    parser.add_argument("string", help="The string to search in the file.")
+    parser.add_argument("string", help="The string to search in the file.", type=str)
 
     args = parser.parse_args()
 
@@ -26,7 +29,7 @@ def grep(word, file):
     """
     for line in file:
         if word in line:
-            print(line.strip())
+            pprint(line.strip())
 
 
 def main():
@@ -40,5 +43,3 @@ def main():
             grep(string, file)
     except FileNotFoundError:
         print("That's not a vaild file.")
-    except IndexError:
-        print("Params missing!")
