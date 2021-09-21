@@ -10,8 +10,10 @@ def get_arguments():
     Get Arguments
     """
     parser = argparse.ArgumentParser("Sech for a word in a file.")
-    parser.add_argument("file")
-    parser.add_argument("string")
+
+    parser.add_argument("file", help="The file where the string will be searched.")
+
+    parser.add_argument("string", help="The string to search in the file.")
 
     args = parser.parse_args()
 
