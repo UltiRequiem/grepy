@@ -11,12 +11,12 @@ keywords = ["commands", "utilities", "cli","grep"]
 include = ["LICENSE"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.9"
 
-[tool.poetry.dev-dependencies]
-black = "^24.3"
-pytest = "^6.2.4"
-pylint = "^2.10.2"
+[tool.poetry.group.dev.dependencies]
+black = "*"
+pytest = "*"
+pylint = "*"
 
 [tool.poetry.scripts]
 grepy = 'grepy:main'
